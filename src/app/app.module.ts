@@ -3,16 +3,26 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { SidePanelModule } from './side-panel/side-panel.module';
+import { RentCarModule } from './views/rent-car/rent-car.module';
+import { CarshareModule } from './views/carshare/carshare.module';
+import { OrdersModule } from './views/orders/orders.module';
+import { ReturnCarModule } from './views/return-car/return-car.module';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    SidePanelModule,
+    RentCarModule,
+    CarshareModule,
+    OrdersModule,
+    ReturnCarModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
 export class AppModule { }
