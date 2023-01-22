@@ -3,6 +3,8 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { DashboardComponent } from './views/dashboard/dashboard.component';
 import { DashboardModule } from './views/dashboard/dashboard.module';
+import { NotFoundPageComponent } from './views/not-found-page/not-found-page.component';
+import { NotFoundPageModule } from './views/not-found-page/not-found-page.module';
 import { OrdersComponent } from './views/orders/orders.component';
 import { OrdersModule } from './views/orders/orders.module';
 import { RentCarComponent } from './views/rent-car/rent-car.component';
@@ -36,10 +38,14 @@ const routes: Routes = [
     path: 'return-car', 
     component: ReturnCarComponent
   },
+  {
+    path: '**',
+    component: NotFoundPageComponent
+  }
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes), RentCarModule, OrdersModule, ReturnCarModule, DashboardModule],
+  imports: [RouterModule.forRoot(routes), RentCarModule, OrdersModule, ReturnCarModule, DashboardModule, NotFoundPageModule],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
