@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 
 import { NavItem } from './nav-item.model';
 
@@ -8,4 +9,6 @@ import { NavItem } from './nav-item.model';
 })
 export class SidePanelButtonComponent {
   @Input() navItem: NavItem = {route: '',value: ''};
+
+  constructor(public router:Router){  }
 }

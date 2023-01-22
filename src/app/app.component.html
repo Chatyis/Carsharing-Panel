@@ -1,2 +1,5 @@
-<app-side-panel></app-side-panel>
-<router-outlet></router-outlet>
+<div class="flex h-screen">
+    <app-side-panel></app-side-panel>
+    <router-outlet></router-outlet>
+    <div class="absolute" (click)="login()">login</div>
+</div>

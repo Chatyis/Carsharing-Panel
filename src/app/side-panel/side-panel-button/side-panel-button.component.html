@@ -1,3 +1,6 @@
-<a [routerLink]="navItem.route">
-    <div routerLinkActive="test" class="text-2xl text-gray-600 py-5 bg-black">{{navItem.value}}</div>
+<a [routerLink]="navItem.route" class="text-gray-600">
+    <div class="text-2xl py-3 pl-5" routerLinkActive="bg-gray-700 text-white">{{navItem.value}}</div>
+</a>
+<a [ngClass]="router.url.includes(navItem.route)?'text-gray-600':'hidden'" [routerLink]="navItem.route + '/' + item.route" *ngFor="let item of navItem.childs">
+    <div class="visible text-sm py-2 pl-10" routerLinkActive="bg-gray-800 text-white">{{item.value}}</div>
 </a>

@@ -8,6 +8,7 @@ import { RentCarModule } from './views/rent-car/rent-car.module';
 import { CarshareModule } from './views/carshare/carshare.module';
 import { OrdersModule } from './views/orders/orders.module';
 import { ReturnCarModule } from './views/return-car/return-car.module';
+import { RestApiModule } from './rest-api/rest-api.module';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { ReturnCarModule } from './views/return-car/return-car.module';
     RentCarModule,
     CarshareModule,
     OrdersModule,
-    ReturnCarModule
+    ReturnCarModule,
+    RestApiModule
   ],
   providers: [],
   bootstrap: [AppComponent],

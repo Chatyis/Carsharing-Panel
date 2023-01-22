@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { SidePanelComponent } from './side-panel.component';
 import { SidePanelButtonModule } from './side-panel-button/side-panel-button.module';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -10,7 +11,8 @@ import { SidePanelButtonModule } from './side-panel-button/side-panel-button.mod
   ],
   imports: [
     CommonModule,
-    SidePanelButtonModule
+    SidePanelButtonModule,
+    RouterModule
   ],
   exports:[
     SidePanelComponent,

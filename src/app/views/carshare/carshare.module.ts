@@ -9,6 +9,11 @@ import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
   {
+    path: '',
+    redirectTo: "/carshare/share-car",
+    pathMatch: 'full'
+  },
+  {
     path: 'history',
     component: HistoryComponent
   },
