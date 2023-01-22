@@ -1,10 +1,14 @@
-<div class="flex flex-col p-5 w-60">
+<div class="flex flex-col p-5 w-60 shadow-xl h-full">
     <a routerLink="/dashboard" routerLinkActive="router-link-active" >
-        <h2 class="text-4xl text-gray-700">Dashboard</h2>
+        <h2 class="text-4xl text-gray-700 pb-2">Dashboard</h2>
     </a>
     <hr class="-mx-2 my-2">
-    <app-side-panel-button [navItem]="{route:'/rent-car', value:'Rent car'}"></app-side-panel-button>
-    <app-side-panel-button [navItem]="{route:'/carshare', value:'Carshare', childs:[{route:'/share-car', value:'Share car'},{route:'/remove-car', value:'Remove car'},{route:'/history', value:'History'}]}"></app-side-panel-button>
-    <app-side-panel-button [navItem]="{route:'/orders', value:'Orders'}"></app-side-panel-button>
-    <app-side-panel-button [navItem]="{route:'/return-car', value:'Return car'}"></app-side-panel-button>
+    <app-side-panel-button [navItem]="{route:'/rent-car', value:'Rent car', img: 'rent-car-icon.svg'}"></app-side-panel-button>
+    <app-side-panel-button [navItem]="{route:'/carshare', value:'Carshare', img: 'carshare-icon.svg', childs:[{route:'/share-car', value:'Share car'},{route:'/remove-car', value:'Remove car'},{route:'/history', value:'History'}]}"></app-side-panel-button>
+    <app-side-panel-button [navItem]="{route:'/orders', value:'Orders', img: 'orders-icon.svg'}"></app-side-panel-button>
+    <app-side-panel-button [navItem]="{route:'/return-car', value:'Return car', img: 'return-car-icon.svg'}"></app-side-panel-button>
+    <div class="flex flex-col justify-center mt-auto">
+        <button>Give us feedback</button>
+        <button class="flex justify-center">Log out <img class="pl-2" src="assets/img/logout-icon.svg" alt=""></button>
+    </div>
 </div>

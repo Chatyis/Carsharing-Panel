@@ -3,14 +3,15 @@ import { LoginService } from './rest-api/login.service';
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html'
+  templateUrl: './app.component.html',
+  styleUrls:['app.component.scss']
 })
 export class AppComponent {
   title = 'carsharing';
 
   constructor(private loginService: LoginService){}
 
-  login(){
+  login() {
     this.loginService.login('asd','abcd');
   }
 }

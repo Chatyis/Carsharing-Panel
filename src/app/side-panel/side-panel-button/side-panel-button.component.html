@@ -1,6 +1,8 @@
-<a [routerLink]="navItem.route" class="text-gray-600">
-    <div class="text-2xl py-3 pl-5" routerLinkActive="bg-gray-700 text-white">{{navItem.value}}</div>
+<a [routerLink]="navItem.route" class="text-gray-600 flex -mx-5" routerLinkActive="bg-gray-700 ">
+    <img routerLinkActive="brightness-200" class="pl-6" [src]="'assets/img/'+navItem.img">
+    <div class="text-2xl py-3 pl-5" routerLinkActive="text-white">{{navItem.value}}</div>
+    <img class="ml-auto pr-2 transform rotate-90" routerLinkActive="brightness-200 rotate-90 mt-1" *ngIf="navItem.childs" src="assets/img/dropdown-icon.svg">
 </a>
-<a [ngClass]="router.url.includes(navItem.route)?'text-gray-600':'hidden'" [routerLink]="navItem.route + '/' + item.route" *ngFor="let item of navItem.childs">
-    <div class="visible text-sm py-2 pl-10" routerLinkActive="bg-gray-800 text-white">{{item.value}}</div>
+<a [ngClass]="router.url.includes(navItem.route)?'':'hidden'" [routerLink]="navItem.route + '/' + item.route" *ngFor="let item of navItem.childs">
+    <div class="visible text-sm py-2 pl-10 -mx-5 bg-gray-700 text-white" routerLinkActive="bg-gray-800">{{item.value}}</div>
 </a>

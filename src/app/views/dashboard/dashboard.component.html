@@ -1,6 +1,35 @@
-<div>
-    
+<div class="lg:py-10 lg:px-16">
+    <div class="w-full shadow-lg p-5 rounded-lg">
+        <div class="flex w-full">
+            <img src="/assets/img/default-user-icon.svg">
+            <div class="text-3xl mt-7 pl-7">
+                <div class="text-gray-800">{{ isDisabled? (userDataForm.get('firstName')?.value + ' ' + userDataForm.get('lastName')?.value) : 'Edit profile' }}</div>
+                <div class="text-2xl text-gray-500">{{isDisabled?'Standard User':'Remember to press “Save” in order to keep Your changes'}}</div>
+            </div>
+            <button class="ml-auto bg-gray-800 text-white h-max w-24 rounded-md py-1 font-semibold" (click)="toggleDisabledInputs()">{{ isDisabled ? 'Edit' : 'Cancel' }}</button>
+            <button class="bg-gray-800 text-white h-max w-24 rounded-md py-1 font-semibold ml-2" (click)="save()" *ngIf="!isDisabled">Save</button>
+        </div>
+        <form [formGroup]="userDataForm" class="flex">
+            <div>
+                <app-editable-input title="Country" controlName="country" [formGroup]="userDataForm"></app-editable-input>
+                <app-editable-input title="City" controlName="city" [formGroup]="userDataForm"></app-editable-input>
+                <app-editable-input title="Address" controlName="address" [formGroup]="userDataForm"></app-editable-input>
+            </div>
+            <div class="mx-16">
+                <app-editable-input title="Postal Code" controlName="postalCode" [formGroup]="userDataForm"></app-editable-input>
+                <app-editable-input title="Email" controlName="email" [formGroup]="userDataForm"></app-editable-input>
+                <app-editable-input title="Phone Number" controlName="phoneNumber" [formGroup]="userDataForm"></app-editable-input>
+            </div>
+            <div>
+                <app-editable-input *ngIf="!isDisabled" title="First Name" controlName="firstName" [formGroup]="userDataForm"></app-editable-input>
+                <app-editable-input *ngIf="!isDisabled" title="Last Name" controlName="lastName" [formGroup]="userDataForm"></app-editable-input>
+            </div>
+            <div class="ml-auto mt-auto text-gray-500">Previous log in time: 15:31 15-13-2022</div>
+        </form>
+    </div>
+    <div class="flex h-full gap-5">
+        <app-summary-block [value]="(dashboard.monthsExp | currency:'USD') || '' " title="Month's expenditure:"></app-summary-block>
+        <app-summary-block [value]="dashboard.rented + ' / ' + dashboard.shared " title="Rented & Shared cars:"></app-summary-block>
+        <app-summary-block [value]="(dashboard.monthsInc | currency:'USD') || '' " title="Month's income:"></app-summary-block>
+    </div>
 </div>
-<app-summary-block></app-summary-block>
-<app-summary-block></app-summary-block>
-<app-summary-block></app-summary-block>

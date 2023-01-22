@@ -27,4 +27,4 @@ Node 18.x required
 - `npm install -g @angular/cli`
 - `Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy RemoteSigned `
 - `npm install`
-- `ng serve`
+- `npm run start`
