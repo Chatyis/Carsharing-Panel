@@ -11,11 +11,31 @@ import { ReturnCarComponent } from './views/return-car/return-car.component';
 import { ReturnCarModule } from './views/return-car/return-car.module';
 
 const routes: Routes = [
-  {path: 'dashboard', component: DashboardComponent},
-  {path: 'rent-car', component: RentCarComponent},
-  {path: 'carshare', loadChildren:() => import('./views/carshare/carshare.module').then(m=>m.CarshareModule)},
-  {path: 'orders', component: OrdersComponent},
-  {path: 'return-car', component: ReturnCarComponent},
+  {
+    path: '', 
+    redirectTo: "/dashboard",
+    pathMatch: 'full'
+  },
+  {
+    path: 'dashboard', 
+    component: DashboardComponent
+  },
+  {
+    path: 'rent-car', 
+    component: RentCarComponent
+  },
+  {
+    path: 'carshare', 
+    loadChildren:() => import('./views/carshare/carshare.module').then(m=>m.CarshareModule)
+  },
+  {
+    path: 'orders', 
+    component: OrdersComponent
+  },
+  {
+    path: 'return-car', 
+    component: ReturnCarComponent
+  },
 ];
 
 @NgModule({
