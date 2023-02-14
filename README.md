@@ -1,4 +1,5 @@
 # Carsharing
+Raport is available in file called DB_raport_IS3.pdf, database is included in CarshareDB a PostgreSQL restore file
 
 ## DB setup
     'ENGINE': 'django.db.backends.postgresql',
@@ -8,12 +9,13 @@
     'HOST': '127.0.0.1',
     'PORT': '5432',
 
-### In case of hosting problems this may be helpful
+### In case of DB hosting problems this may be helpful
 - Adding postgress to Path variable
 - `initdb`
 - `netstat -aon | findstr 5432`
     `taskkill /pid <task_pid> /f`
 - `pg_ctl -D <path> start`
+
 ## Django
 - `pip install` everything needed from project
 - `python manage.py runserver`
