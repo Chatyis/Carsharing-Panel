@@ -15,10 +15,7 @@
     `taskkill /pid <task_pid> /f`
 - `pg_ctl -D <path> start`
 ## Django
-- `pip install virtualenv`
-- `pip install django`
-- `pip install mysql`
-- `pip install psycopg2`
+- `pip install` everything needed from project
 - `python manage.py runserver`
 
 ## Angular
