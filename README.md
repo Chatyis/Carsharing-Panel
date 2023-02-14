@@ -1,5 +1,5 @@
 # Carsharing
-Raport is available in file called DB_raport_IS3.pdf, database is included in CarshareDB a PostgreSQL restore file
+Raport is available in file called DB_raport_IS3.pdf, database is included in CarshareDB a PostgreSQL restore file, backend is submodule in this repository  
 
 ## DB setup
     'ENGINE': 'django.db.backends.postgresql',
